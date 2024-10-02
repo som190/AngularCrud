@@ -1,0 +1,48 @@
+<h1>Contacts App</h1>
+
+<div>
+  <button ngClass="button2"  (click)="add()"><h3>Add</h3></button>
+</div>
+
+
+<div>
+<div>
+  
+
+   <div *ngIf="showForm" class="myForm">
+  <button (click)="stop()">❎</button><br><br>
+  <input type="number" placeholder="Enter Id" [(ngModel)]="id"><br><br>
+  <input type="text" placeholder="Enter First Name " [(ngModel)]="firstname"><br><br>
+  <input type="text" placeholder="Enter Last Name" [(ngModel)]="lastname"><br><br>
+  <input type="text" placeholder="Enter Email" [(ngModel)]="email"><br><br>
+  <button (click)="submitData()">{{editMode ? 'update':'submit'}}</button>
+</div>
+</div>
+
+<div >
+    
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <tr *ngFor="let item of products">
+        <td>{{ item.id }}</td>
+        <td>{{ item.firstName}}</td>
+        <td>{{ item.lastName }}</td>
+        <td>{{ item.email}}</td>
+        <td>
+          <button (click)="update(item.id)">Update(✏️)</button>
+        </td>
+        <td>
+          <button (click)="remove(item.id)">Delete(❌)</button>
+        </td>
+      </tr>
+    </table>
+    
+</div>
+</div>

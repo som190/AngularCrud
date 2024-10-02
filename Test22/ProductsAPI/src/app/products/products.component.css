@@ -1,0 +1,32 @@
+table, th   {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 20px;
+    font-size:x-large;
+    font: bold;
+  }
+  table, td   {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 20px;
+    font-size: large;
+  }
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  .button2 {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10PX 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
